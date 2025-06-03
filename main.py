@@ -69,18 +69,18 @@ def add():
         
         if is_ok:
             try:
-                with open("passwords.json",mode="r") as xyz:
+                with open("day#30(Upgradation of Password Manager App)\passwords.json",mode="r") as xyz:
                     #reading old data
                     data=json.load(xyz)#Used to read the contents of the JSON file
                     #Updating old data with new data
                     data.update(new_data)#Used to add the new data to the existing JSON file
 
-                with open("passwords.json",mode="w") as xyz:
+                with open("day#30(Upgradation of Password Manager App)\passwords.json",mode="w") as xyz:
                     #Writing the new data to the existing file and saving the updated data
                     json.dump(data,xyz,indent=4)#dump method is used to write to a json file
                     
             except FileNotFoundError:
-                with open("passwords.json",mode="w") as xyz:
+                with open("day#30(Upgradation of Password Manager App)\passwords.json",mode="w") as xyz:
                     json.dump(new_data,xyz,indent=4)
             finally:
                 website_entry.delete(0,tkinter.END)
@@ -153,7 +153,7 @@ password_entry.grid(column=1,row=3,columnspan=1)
 
 ##Putting the image on canvas
 canvas=tkinter.Canvas(height=200,width=200,highlightthickness=0)
-logo_image=tkinter.PhotoImage(file="logo.png")
+logo_image=tkinter.PhotoImage(file="day#30(Upgradation of Password Manager App)\logo.png")
 canvas.create_image(100,100,image=logo_image)
 canvas.grid(column=1,row=0)
 
